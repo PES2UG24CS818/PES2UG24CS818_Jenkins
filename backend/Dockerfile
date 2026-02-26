@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN g++ server.cpp -o server
+RUN g++ app.cpp -o server
 
 EXPOSE 8080
 
