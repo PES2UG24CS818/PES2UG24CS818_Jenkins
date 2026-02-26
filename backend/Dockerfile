@@ -1,10 +1,8 @@
-FROM ubuntu:22.04
+FROM gcc:12
 
-RUN apt-get update || true && \
-    apt-get install -y g++ || true
-
-COPY . /app
 WORKDIR /app
+
+COPY . .
 
 RUN g++ server.cpp -o server
 
